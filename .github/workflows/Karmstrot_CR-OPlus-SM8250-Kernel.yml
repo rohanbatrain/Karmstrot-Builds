@@ -1,4 +1,4 @@
-name: Build crDroid OPlus SM8250 Kernel
+name: Build Karmstrot_CR (OPlus SM8250 Kernel)
 
 on:
   workflow_dispatch:
