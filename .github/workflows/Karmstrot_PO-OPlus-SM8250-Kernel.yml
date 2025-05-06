@@ -1,4 +1,6 @@
-name: Build PixelOS OPlus SM8250 Kernel
+name: Build Karmstrot_PO (OPlus SM8250 Kernel)
+
+
 
 on:
   workflow_dispatch:
