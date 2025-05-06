@@ -15,10 +15,7 @@
 
 ## 🔍 Overview
 
-**Karmstrot** is a performance-tuned, modular kernel automation suite for **OnePlus SM8250** devices.  
-It provides fully automated GitHub Actions workflows to compile, root (via **KernelSU**), and package the kernel using **AnyKernel3**.
-
-Ideal for developers and power users who want streamlined builds across multiple ROMs with minimal manual effort.
+**Karmstrot** is a performance-tuned, modular kernel automation suite for **OnePlus SM8250** devices. It provides fully automated GitHub Actions workflows to compile, root (via **KernelSU**), and package the kernel using **AnyKernel3**. Ideal for developers and power users who want streamlined builds across multiple ROMs with minimal manual effort.
 
 ---
 
