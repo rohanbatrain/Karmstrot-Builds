@@ -45,7 +45,7 @@ jobs:
     - name: Download kernel source
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone --recursive https://github.com/The-Anomalist/Anomaly-Kernel -b Echelon android-kernel --depth=1
+        git clone --recursive https://github.com/The-Anomalist/Anomaly-Kernel -b Crdroid android-kernel --depth=1
 
 
 
@@ -60,12 +60,6 @@ jobs:
         if ! grep -q "CONFIG_KSU=y" arch/arm64/configs/vendor/kona-perf_defconfig; then
           sed -i '$a # KernelSU\nCONFIG_KSU_MANUAL_HOOK=y' arch/arm64/configs/vendor/kona-perf_defconfig
         fi
-        
-        # Rename kernel string for crDroid compatibility and direct release
-        # Anomaly Kernel includes added features on top of the base, so I'm using it as the base for crDroid
-        # Hence, directly renaming and releasing under the crDroid branding
-        sed -i 's/Karmstrot_AK_by_Rohan/Karmstrot_CR_by_Rohan/' arch/arm64/configs/vendor/kona-perf_defconfig
-        
         KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 10200)
         echo "KSUVER=$KSU_VERSION" >> $GITHUB_ENV
         cd scripts
