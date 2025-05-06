@@ -45,7 +45,7 @@ jobs:
     - name: Download kernel source
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone --recursive https://github.com/The-Anomalist/Anomaly-Kernel -b Crdroid android-kernel --depth=1
+        git clone --recursive https://github.com/rohanbatrain/Anomaly-Kernel -b Crdroid android-kernel --depth=1
 
 
 
