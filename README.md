@@ -1,62 +1,105 @@
-# KernelSU_Build_Test  
+# Karmstrot Kernel for OPlus SM8250 Devices
 
-## Important Things
+![crDroid Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_CR-OPlus-SM8250-Kernel.yml?label=crDroid)
+![LineageOS Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_LO-OPlus-SM8250-Kernel.yml?label=LineageOS)
+![NamelessOS Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_NO-OPlus-SM8250-Kernel.yml?label=NamelessOS)
+![Anomaly-Kernel](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_AK-OPlus-SM8250-Kernel.yml?label=Generic)
 
-### Official KernelSU
-- For **NonGKI** devices, the last officially supported version of KernelSU is **0.9.5 (11872)**.  
-  *(Versions 1.0 and later no longer support NonGKI, so please stop asking why the KernelSU version is always 11872.)*
-- Device-specific notes:
-  - **4.19 Kernel:** Only **version 1.0.1 (11948)** or earlier of the official KernelSU manager is supported.
-  - **5.4 Kernel:** The latest version of the official KernelSU manager is currently supported.
 
-### Kernel Source
-- The kernel source is entirely from the official ROM authors.  
-- The only modification is the addition of KernelSU.
 
-## Installation Guide  
+---
 
-**Anyway, read the [KernelSU official website](https://kernelsu.org/guide/installation.html) first!!**  
+## 🔍 Overview
 
-1. Download AnyKernel3 from github action  
+**Karmstrot** is a performance-tuned, modular kernel automation suite for **OnePlus SM8250** devices.  
+It provides fully automated GitHub Actions workflows to compile, root (via **KernelSU**), and package the kernel using **AnyKernel3**.
 
-**LineageOS 21**:   
-- [OPlus SM8250](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/LineageOS-OPlus-SM8250-Kernel.yml): ```OnePlus 8 | OnePlus 8 Pro | OnePlus 8T | OnePlus 9R```  
-- [OPlus SM8550](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/LineageOS-Salami-Kernel.yml): ```OnePlus 11 (salami)```  
+Ideal for developers and power users who want streamlined builds across multiple ROMs with minimal manual effort.
 
-**Nameless-CLO 15**:  
-- [OPlus SM8250 (Chris Chen)](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/Nameless-OPlus-SM8250-Kernel.yml): ```OnePlus 8 | OnePlus 8 Pro | OnePlus 8T | OnePlus 9R```  
+---
 
-**PixelOS 15**:  
-- [OPlus SM8250 (jef00)](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/PixelOS-OPlus-SM8250-Kernel.yml): ```OnePlus 8 | OnePlus 8 Pro | OnePlus 8T```  
+## 🌟 ROM Support
 
-**crDroid 11**:
-- [OPlus SM8250 (bojantanasic & The Anomalist)](https://github.com/crdroidandroid/android_kernel_oneplus_sm8250): ```OnePlus 8 | OnePlus 8 Pro | OnePlus 8T```
+| Workflow File                          | ROM Name    | Kernel Type     |
+| -------------------------------------- | ----------- | ----------------|
+| `Karmstrot_CR-OPlus-SM8250-Kernel.yml` | crDroid     | Karmstrot Build |
+| `Karmstrot_LO-OPlus-SM8250-Kernel.yml` | LineageOS   | Karmstrot Build |
+| `Karmstrot_NO-OPlus-SM8250-Kernel.yml` | Nameless OS | Karmstrot Build |
+| `Karmstrot_AK-OPlus-SM8250-Kernel.yml` | Generic     | Karmstrot Build |
 
-**Nameless 14**:   
-- [OPlus SM8350 (Chandu)](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/Nameless-OPlus-SM8350(Chandu)-Kernel.yml): ```OnePlus 9 | OnePlus 9 Pro```  
-- [OPlus SM8550 (Chandu)](https://github.com/AzusaHana/KernelSU_Build_Test/actions/workflows/Nameless-OPlus-SM8550-Kernel.yml): ```OnePlus 11 (salami)```  
+---
 
-2. Flashing AnyKernel3 Using ```adb sideload```  
-Reboot your device into recovery mode and execute ```adb sideload AK3-xxx.zip``` to install AnyKernel3.  
-> Tip: If your custom recovery does not support flashing AnyKernel3, consider flashing LineageOS recovery first and then proceed.  
+## ⚙️ Features
 
-3. Using Kernel Flasher to OTA  
-After installing the OTA and before rebooting, use [Kernel Flasher](https://github.com/tiann/KernelFlasher) to flash AnyKernel3 into the other slot.  
-> Tip: If there is not a local update in ROM, please follow step 2 to flash AnyKernel3 after update.  
+* 🛡️ Built-in **KernelSU** support (root without Magisk)
+* 💡 YAML-powered **GitHub Actions** automation
+* ⚡ Tuned for **performance** and **battery**
+* 📦 Packaged using **AnyKernel3** — flash and go!
+* 🔗 Based on **AOSP common kernel**
+* 🔁 Extensible & modular CI for new ROMs/devices
 
-## Original Kernel Source  
+---
 
-LineageOS 22:  
-[OPlus SM8250](https://github.com/LineageOS/android_kernel_oneplus_sm8250) | [OPlus SM8550](https://github.com/LineageOS/android_kernel_oneplus_sm8550)  
+## 🚀 Getting Started
 
-Nameless-CLO 15:  
-[OPlus SM8250 (Chris Chen)](https://github.com/Nameless-AOSP-OSS/kernel_oneplus_sm8250)  
+To build your own Karmstrot-based kernel:
 
-PixelOS 15:  
-[OPlus SM8250 (jef00)](https://github.com/jef00/kernel_oneplus_sm8250/tree/fifteen)  
+1. **Fork** this repository.
+2. Navigate to `.github/workflows/` and edit your target YAML file (optional).
+3. Go to the **Actions** tab and trigger a build.
+4. Once done, download the **flashable ZIP** from the workflow artifacts.
 
-crDroid 11:  
-[OPlus SM8250 (bojantanasic & The Anomalist)](https://github.com/The-Anomalist/Anomaly-Kernel)
+✅ All builds run in the cloud via GitHub Actions — **no local setup** required.
 
-Nameless 14:  
-[OPlus SM8350 (Chandu)](https://github.com/chandu078/android_kernel_oneplus_sm8350) | [OPlus SM8550 (Chandu)](https://github.com/chandu078/android_kernel_oneplus_sm8550)  
+---
+
+## 📱 Target Devices
+
+Karmstrot supports all **SM8250-based OnePlus** devices:
+
+- OnePlus 8
+- OnePlus 8 Pro
+- OnePlus 8T
+
+---
+
+## 📂 Sources Used
+
+This kernel automation project is a **compiled and integrated work** based on the original efforts of the following repositories:
+
+- https://github.com/AzusaHana/KernelSU_Build_Test  
+- https://github.com/jef00/kernel_oneplus_sm8250  
+- https://github.com/Nameless-AOSP-OSS/kernel_oneplus_sm8250  
+- https://github.com/LineageOS/android_kernel_oneplus_sm8250  
+- https://github.com/The-Anomalist/Anomaly-Kernel  
+- https://github.com/rsuntk/KernelSU  
+
+---
+
+## 🙌 Credits
+
+All core credit goes to the original developers and maintainers of the above repositories.  
+I take **zero credit** for the kernel source or rooting methods themselves — this project simply merges and automates them for easier use.
+
+Special thanks to:
+
+- 🧠 **KernelSU** Team  
+- 📦 **AnyKernel3** by osm0sis  
+- 🏗️ **GitHub Actions** for cloud automation  
+- ❤️ ROM teams for crDroid, LineageOS, Nameless OS
+
+---
+
+## ⚠️ Disclaimer
+
+> This is a **compiled and integrated effort**, not a kernel written from scratch.  
+> My contribution lies in **researching**, **merging**, **automating**, and **testing** — assembling the puzzle from open-source pieces, and offering an easy-to-use GitHub Actions pipeline.  
+> Full respect and appreciation to the original authors who made this possible. 🙏
+
+---
+
+## 📬 Contact
+
+Have feedback or questions? Open an [Issue](https://github.com/rohanbatrain/Karmstrot-Builds/issues) or reach out via Discussions.
+
+---
