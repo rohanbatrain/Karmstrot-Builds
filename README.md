@@ -1,9 +1,13 @@
 # Karmstrot Kernel for OPlus SM8250 Devices
 
+![banner](https://github.com/user-attachments/assets/6acc7ee0-427b-42e9-8964-52ccf72b44df)
+
+
 ![crDroid Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_CR-OPlus-SM8250-Kernel.yml?label=crDroid)
 ![LineageOS Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_LO-OPlus-SM8250-Kernel.yml?label=LineageOS)
 ![NamelessOS Build](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_NO-OPlus-SM8250-Kernel.yml?label=NamelessOS)
 ![Anomaly-Kernel](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_AK-OPlus-SM8250-Kernel.yml?label=Generic)
+
 
 
 
