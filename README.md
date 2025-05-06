@@ -23,10 +23,10 @@
 
 | Workflow File                          | ROM Name    | Kernel Type     |
 | -------------------------------------- | ----------- | ----------------|
-| `Karmstrot_CR-OPlus-SM8250-Kernel.yml` | crDroid     | Karmstrot Build |
-| `Karmstrot_LO-OPlus-SM8250-Kernel.yml` | LineageOS   | Karmstrot Build |
-| `Karmstrot_NO-OPlus-SM8250-Kernel.yml` | Nameless OS | Karmstrot Build |
-| `Karmstrot_AK-OPlus-SM8250-Kernel.yml` | Generic     | Karmstrot Build |
+| `Karmstrot_CR-OPlus-SM8250-Kernel.yml` | [crDroid](https://github.com/rohanbatrain/Anomaly-Kernel)     | Karmstrot Build |
+| `Karmstrot_LO-OPlus-SM8250-Kernel.yml` | [LineageOS](https://github.com/rohanbatrain/android_kernel_oneplus_sm8250)   | Karmstrot Build |
+| `Karmstrot_NO-OPlus-SM8250-Kernel.yml` | [Nameless OS](https://github.com/rohanbatrain/kernel_oneplus_sm8250) | Karmstrot Build |
+| `Karmstrot_AK-OPlus-SM8250-Kernel.yml` | [Anomaly-Kernel](https://github.com/rohanbatrain/Anomaly-Kernel)     | Karmstrot Build |
 
 ---
 
