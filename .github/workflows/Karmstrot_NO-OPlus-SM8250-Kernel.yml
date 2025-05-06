@@ -1,4 +1,4 @@
-name: Build Nameless OPlus SM8250 Kernel
+name: Build Karmstrot_NO (OPlus SM8250 Kernel)
 
 on:
   workflow_dispatch:
