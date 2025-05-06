@@ -1,5 +1,4 @@
-name: Build AKRB Kernel by ${{ github.actor }}
-
+name: Build AKRB OPlus SM8250 Kernel
 on:
   workflow_dispatch:
 
