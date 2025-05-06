@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Kolkata
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
     - name: Download kernel source
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone --recursive https://github.com/The-Anomalist/Anomaly-Kernel -b Echelon android-kernel --depth=1
+        git clone --recursive https://github.com/rohanbatrain/Anomaly-Kernel# -b Echelon android-kernel --depth=1
 
     - name: Set up rsuntk KernelSU
       run: |
