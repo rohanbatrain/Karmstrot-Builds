@@ -1,7 +1,9 @@
 name: Build Karmstrot_AK (OPlus SM8250 Kernel)
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   TZ: Asia/Kolkata
@@ -109,7 +111,7 @@ jobs:
       if: ${{ env.CHECK_IMAGE == 'true' }}
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/osm0sis/AnyKernel3 --depth=1 AnyKernel3
+        git clone https://github.com/rohanbatrain/AnyKernel3-SM8250/tree/master --depth=1 AnyKernel3
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' AnyKernel3/anykernel.sh
         sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=auto;!g' AnyKernel3/anykernel.sh
         sed -i 's/IS_SLOT_DEVICE=0;/IS_SLOT_DEVICE=auto;/g' AnyKernel3/anykernel.sh
