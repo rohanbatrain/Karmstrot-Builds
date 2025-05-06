@@ -1,4 +1,4 @@
-name: Build AKRB OPlus SM8250 Kernel
+name: Build Karmstrot_AK (OPlus SM8250 Kernel)
 on:
   workflow_dispatch:
 
