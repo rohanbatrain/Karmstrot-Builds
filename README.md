@@ -9,8 +9,6 @@
 ![Anomaly-Kernel](https://img.shields.io/github/actions/workflow/status/rohanbatrain/Karmstrot-Builds/Karmstrot_AK-OPlus-SM8250-Kernel.yml?label=Anomaly-Kernel)
 
 
-
-
 ---
 
 ## 🔍 Overview
